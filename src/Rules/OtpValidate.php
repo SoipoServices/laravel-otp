@@ -1,9 +1,9 @@
 <?php
 
-namespace Teckwei1993\Otp\Rules;
+namespace SoipoServices\Otp\Rules;
 
 use Illuminate\Contracts\Validation\Rule;
-use Teckwei1993\Otp\OtpFacade as Otp;
+use SoipoServices\Otp\OtpFacade as Otp;
 
 class OtpValidate implements Rule
 {

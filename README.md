@@ -1,20 +1,22 @@
 # Laravel OTP
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/teckwei1993/laravel-otp.svg?style=flat-square)](https://packagist.org/packages/teckwei1993/laravel-otp)
-[![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](https://packagist.org/packages/teckwei1993/laravel-otp)
-[![Total Downloads](https://img.shields.io/packagist/dt/teckwei1993/laravel-otp.svg?style=flat-square)](https://packagist.org/packages/teckwei1993/laravel-otp)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/SoipoServices/laravel-otp.svg?style=flat-square)](https://packagist.org/packages/SoipoServices/laravel-otp)
+[![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](https://packagist.org/packages/SoipoServices/laravel-otp)
+[![Total Downloads](https://img.shields.io/packagist/dt/SoipoServices/laravel-otp.svg?style=flat-square)](https://packagist.org/packages/SoipoServices/laravel-otp)
 
 ## Introduction
 
 A package for Laravel One Time Password (OTP) generator and validation without Eloquent Model, since it done by *Cache*.
 The cache connection same as your laravel cache config and it supported: "apc", "array", "database", "file", "memcached", "redis"
 
+This is a fork of SoipoServices/laravel-otp , thanks to  SoipoServices for his hard work.
+
 ## Installation
 
 ### Install via composer
 
 ```bash
-composer require teckwei1993/laravel-otp
+composer require soiposervices/laravel-otp
 ```
 
 ### Add Service Provider & Facade
@@ -28,13 +30,13 @@ Once the package is added, the service provider and facade will be auto discover
 Add the ServiceProvider to the providers array in `config/app.php`:
 
 ```php
-Teckwei1993\Otp\OtpServiceProvider::class
+SoipoServices\Otp\OtpServiceProvider::class
 ```
 
 Add the Facade to the aliases array in `config/app.php`:
 
 ```php
-'Otp' => Teckwei1993\Otp\OtpFacade::class
+'Otp' => SoipoServices\Otp\OtpFacade::class
 ```
 
 ## Configuration
@@ -42,7 +44,7 @@ Add the Facade to the aliases array in `config/app.php`:
 Publish config and language file
 
 ```bash
-php artisan vendor:publish --provider="Teckwei1993\Otp\OtpServiceProvider"
+php artisan vendor:publish --provider="SoipoServices\Otp\OtpServiceProvider"
 ```
 
 This package publishes an `otp.php` file inside your applications's config folder which contains the settings for this package. Most of the variables are bound to environment variables, you may add Key-Value pair to the `.env` file in the Laravel application.
@@ -142,7 +144,7 @@ $result = Otp::validate('reg:name@domain.com', '123456');
 ```php
 // in a `FormRequest`
 
-use Teckwei1993\Otp\Rules\OtpValidate;
+use SoipoServices\Otp\Rules\OtpValidate;
 
 public function rules()
 {
@@ -167,7 +169,7 @@ $result = Otp::validate('123456');
 
 // in a `FormRequest`
 
-use Teckwei1993\Otp\Rules\OtpValidate;
+use SoipoServices\Otp\Rules\OtpValidate;
 
 public function rules()
 {
@@ -234,7 +236,7 @@ $result = Otp::setSensitive(true)->validate('identifier-key-here', 'password-her
 
 // in controller
 
-use Teckwei1993\Otp\Rules\OtpValidate;
+use SoipoServices\Otp\Rules\OtpValidate;
 
 $request->validate([
     'code' => ['required', new OtpValidate('identifier-key-here', ['sensitive' => true])]
@@ -272,7 +274,7 @@ $result = Otp::setDisposable(false)->validate('login-confirmation', 'password-he
 
 // in controller
 
-use Teckwei1993\Otp\Rules\OtpValidate;
+use SoipoServices\Otp\Rules\OtpValidate;
 
 $request->validate([
     'code' => ['required', new OtpValidate('login-confirmation', ['disposable' => false])]
@@ -303,7 +305,7 @@ $result = Otp::setSkip(true)->validate('identifier-key-here', 'password-here');
 
 // in controller
 
-use Teckwei1993\Otp\Rules\OtpValidate;
+use SoipoServices\Otp\Rules\OtpValidate;
 
 $request->validate([
     'code' => ['required', new OtpValidate('identifier-key-here', ['skip' => true])]
@@ -352,6 +354,6 @@ All contributions are welcome! 😄
 
 The MIT License (MIT).
 
-If you enjoy this, please consider supporting me:
+If you enjoy this, please consider supporting SoipoServices:
 
-<a href="https://www.buymeacoffee.com/teckwei1993" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" width="217" height="60" /></a>
+<a href="https://www.buymeacoffee.com/SoipoServices" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" width="217" height="60" /></a>

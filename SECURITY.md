@@ -9,4 +9,4 @@
 ## Reporting a Vulnerability
 
 If you found a vulnerability, please create a issues.
-https://github.com/teckwei1993/laravel-otp/issues
+https://github.com/SoipoServices/laravel-otp/issues

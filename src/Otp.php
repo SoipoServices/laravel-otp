@@ -1,6 +1,6 @@
 <?php 
 
-namespace Teckwei1993\Otp;
+namespace SoipoServices\Otp;
 
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Facade;

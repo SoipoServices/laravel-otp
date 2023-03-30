@@ -1,7 +1,7 @@
 {
     "name": "soiposervices/laravel-otp",
     "description": "Laravel OTP generator and validation",
-    "homepage": "https://github.com/teckwei1993/laravel-otp",
+    "homepage": "https://github.com/SoipoServices/laravel-otp",
     "keywords": [
         "laravel",
         "otp",
@@ -20,10 +20,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Teckwei1993\\Otp\\OtpServiceProvider"
+                "SoipoServices\\Otp\\OtpServiceProvider"
             ],
             "aliases": {
-                "Otp": "Teckwei1993\\Otp\\OtpFacade"
+                "Otp": "SoipoServices\\Otp\\OtpFacade"
             }
         }
     },
@@ -33,7 +33,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Teckwei1993\\Otp\\": "src"
+            "SoipoServices\\Otp\\": "src"
         }
     }
 }
