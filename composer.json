@@ -1,5 +1,5 @@
 {
-    "name": "teckwei1993/laravel-otp",
+    "name": "soiposervices/laravel-otp",
     "description": "Laravel OTP generator and validation",
     "homepage": "https://github.com/teckwei1993/laravel-otp",
     "keywords": [
@@ -13,8 +13,8 @@
     "license": "MIT",
     "authors": [
         {
-            "name": "Lim Teck Wei",
-            "email": "teckwei1993@gmail.com"
+            "name": "SoipoServices",
+            "email": "info@soiposervices.com"
         }
     ],
     "extra": {
